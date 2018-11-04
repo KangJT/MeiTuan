@@ -1,0 +1,300 @@
+@import "mixin.scss";
+@import "common.scss";
+.wrap {
+    width: 100%;
+    height: 100%;
+    // overflow: hidden;
+    @include box_flex;
+    @include direction(column);
+    font-size: pxTorem(14px);
+    header {
+        width: 100%;
+        height: pxTorem(45px);
+        background: #06C1AE;
+        @include align(center);
+        @include box_flex;
+        @include justify(space-between);
+        padding: 0 pxTorem(10px);
+        @include sizing;
+        color: #fff;
+        @include flex_shrink(0);
+        .city {
+            width: pxTorem(55px);
+            @include box-flex;
+            @include justify(center);
+            @include align(center);
+            span.iconfont {
+                padding: pxTorem(5px);
+                @include sizing;
+                font-size: pxTorem(16px);
+            }
+        }
+        .wd {
+            width: pxTorem(50px);
+            @include box_flex;
+            @include align(center);
+            @include justify(center);
+            @include direction(column);
+            padding-left: pxTorem(10px);
+            @include sizing;
+            span.iconfont {
+                font-size: pxTorem(16px);
+            }
+        }
+        form {
+            @include flex;
+            @include align(center);
+            height: pxTorem(30px);
+            border-radius: pxTorem(3px);
+            background: #05A494;
+            @include box_flex;
+            padding-right: pxTorem(10px);
+            @include sizing;
+            span {
+                font-size: pxTorem(16px);
+                padding: 0 pxTorem(5px);
+            }
+            input {
+                flex: 1;
+            }
+        }
+    }
+    section {
+        width: 100%;
+        overflow: hidden;
+        .content {
+            width: 100%;
+            position: relative;
+            background: #F0EFED;
+            .pull {
+                width: 100%;
+                height: pxTorem(50px);
+                background: pink;
+                position: absolute;
+                bottom: pxTorem(-50px);
+                left: 0;
+                line-height: pxTorem(50px);
+                text-align: center;
+            }
+            .bj {
+                img {
+                    width: 100%;
+                }
+            }
+            .banner {
+                background: #fff;
+                width: 100%;
+                padding-bottom: pxTorem(30px);
+                @include sizing;
+                border-top: 1px #F1F0ED solid;
+                border-bottom: 1px #F1F0ED solid;
+                margin-bottom: pxTorem(10px);
+                background: #fff;
+                .swiper-wrapper {
+                    height: 100%;
+                    width: 100%;
+                    .swiper-slide {
+                        height: 100%;
+                        width: 100%;
+                        .dl-list {
+                            height: 90%;
+                            width: 100%;
+                            @include sizing;
+                            @include box_flex;
+                            flex-wrap: wrap;
+                            @include align;
+                            dl {
+                                @include box_flex;
+                                @include justify;
+                                height: 45%;
+                                width: 20%;
+                                margin-top: pxTorem(15px);
+                                @include align;
+                                @include direction(column);
+                                @include flex_shrink(0);
+                                dt {
+                                    color: #666;
+                                    margin-top: pxTorem(5px);
+                                }
+                            }
+                        }
+                    }
+                }
+                .swiper-pagination {
+                    .swiper-pagination-bullet {
+                        height: pxTorem(10px);
+                        width: pxTorem(10px);
+                        margin: 0 pxTorem(10px);
+                    }
+                    .swiper-pagination-bullet-active {
+                        background: #069789;
+                    }
+                }
+            }
+            .list-wrap {
+                height: auto;
+                width: 100%;
+                overflow: hidden;
+                h1 {
+                    height: pxTorem(40px);
+                    width: 100%;
+                    padding: 0 pxTorem(10px);
+                    @include sizing;
+                    @include align;
+                    @include box_flex;
+                    @include setBottomLine;
+                    font-size: pxTorem(16px);
+                    color: #333;
+                    background: #fff;
+                }
+                .list {
+                    height: auto;
+                    width: 100%;
+                    background: #fff;
+                    padding: 0 pxToerm(10px);
+                    @include sizing;
+                    padding: 0 pxTorem(10px);
+                    @include sizing;
+                    //  overflow: hidden;
+                    dl {
+                        height: pxTorem(100px);
+                        width: 100%;
+                        @include box_flex;
+                        padding: pxTorem(5px) 0;
+                        @include sizing;
+                        @include setBottomLine;
+                        dd {
+                            border-radius: pxTorem(5px);
+                            overflow: hidden;
+                            height: 100%;
+                            width: 30%;
+                            img {
+                                height: 100%;
+                                width: 100%;
+                            }
+                        }
+                        dt {
+                            flex: 1;
+                            height: 100%;
+                            margin-left: pxTorem(10px);
+                            @include box_flex;
+                            @include justify(space-between);
+                            div {
+                                @include box_flex;
+                                @include direction(column);
+                                @include justify(space-between);
+                                width: 100%;
+                                h2 {
+                                    @include box_flex;
+                                    @include direction(column);
+                                    span {
+                                        &:nth-of-type(1) {
+                                            line-height: pxTorem(30px);
+                                            font-size: pxTorem(15px);
+                                        }
+                                        &:nth-of-type(2) {
+                                            font-size: pxTorem(12px);
+                                            color: #666;
+                                        }
+                                    }
+                                }
+                                h3 {
+                                    @include box_flex;
+                                    @include justify(space-between);
+                                    p {
+                                        &:nth-of-type(2) {
+                                            span {
+                                                color: #666;
+                                            }
+                                        }
+                                    }
+                                    font-size: pxTorem(13px);
+                                    span {
+                                        color: #06c1ae;
+                                        b {
+                                            font-size: pxTorem(20px);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .mes {
+                @include sizing;
+                height: pxTorem(200px);
+                width: 100%;
+                background: #f0efed;
+                .danger {
+                    @include box_flex;
+                    @include justify(space-between);
+                    padding: 0 pxTorem(10px);
+                    margin-bottom: pxTorem(10px);
+                    @include sizing;
+                    @include align;
+                    height: pxTorem(30px);
+                    div {
+                        span {
+                            padding: pxTorem(8px) pxTorem(18px);
+                            color: #06c1ae;
+                            padding: pxTorem(5px) pxTorem(15px);
+                            @include sizing;
+                            border: solid pxTorem(1px) #06c1ae;
+                            border-radius: pxTorem(3px);
+                        }
+                        &:nth-of-type(2) {
+                            span {
+                                @include sizing;
+                                padding: pxTorem(5px) pxTorem(25px);
+                            }
+                        }
+                    }
+                }
+                .footer-list {
+                    width: 100%;
+                    @include box_flex;
+                    @include justify;
+                    padding: pxTorem(15px) 0;
+                    li {
+                        color: #06c1ae;
+                        padding: 0 pxTorem(17px);
+                    }
+                    span {
+                        font-weight: bold;
+                    }
+                }
+                .hsrc {
+                    @include box_flex;
+                    @include align;
+                    @include justify;
+                    line-height: pxTorem(25px);
+                    span {
+                        color: #06c1ae;
+                        padding: 0 pxTorem(10px);
+                    }
+                }
+                .lineb {
+                    width: 100%;
+                    @include box_flex;
+                    @include align;
+                    @include justify;
+                    position: relative;
+                    background: cadetblue;
+                    margin-top: pxTorem(20px);
+                    span {
+                        color: #999;
+                        position: absolute;
+                        background: #f0efed;
+                        padding: 0 pxTorem(5px);
+                    }
+                    h1 {
+                        width: 90%;
+                        height: 100%;
+                        border-bottom: solid 1px #ccc;
+                    }
+                }
+            }
+        }
+    }
+}
